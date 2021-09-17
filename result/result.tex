@@ -1,0 +1,490 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[breaklinks, hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+
+\setcounter{tocdepth}{1}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftsecindent}{0.5cm}
+\let\oldpart\part
+\newcommand{\parttitle}{}
+\renewcommand{\part}[1]{\oldpart{#1}\renewcommand{\parttitle}{#1}}
+
+\pagestyle{fancy}
+\lhead{\ifthenelse{\equal{\thepart}{}}{Contents}{Part \thepart~---~\parttitle}}
+\rhead{Joachim Favre \& Alberts Reisons}
+
+\title{A set of proofs that definitely deserve a 6}
+\author{Joachim Favre \& Alberts Reisons}
+\date{6th May 2021}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\part{Axioms}
+
+
+\section{The removal of parenthesis\label{6}}
+We assume this equality:
+\[\left(a\right) = a\]
+with $a$ being unknown or known.
+
+
+\section{The power distribution\label{7}}
+We suppose the following equality:
+\[b^x  b^y = b^{\left(x + y\right)}\]
+with $b$, $x$ and $y$ being unknown (or known).
+
+
+\section{The identity exponent\label{8}}
+We suppose this proposition:
+\[a^1 = a\]
+with $a$ being unknown (or known).
+
+
+\section{The commutativity of the product\label{10}}
+We assume this proposition to be true:
+\[ab = ba\]
+with $a$ and $b$ being unknown (or known).
+
+
+\section{The left distributivity of the product\label{11}}
+We take the following affirmation as an axiom:
+\[a\left(b + c\right) = ab + ac\]
+with $a$, $b$ and $c$ being unknown (or known).
+
+
+\section{The left multiplication by the identity\label{12}}
+We suppose that this proposition is true:
+\[1a = a\]
+with $a$ being unknown (or known).
+
+
+\section{The commutativity of the addition\label{20}}
+We take the following proposition as an axiom:
+\[a + b = b + a\]
+with $a$ and $b$ being unknown (or known).
+\newpage
+
+\part{Theorems}
+
+\section{The addition\label{0}}
+\subsection{Theorem}
+We are trying to prove this affirmation:
+\[a + b = c\]
+with $a$ and $b$ being unknown (or known), and with $c=a+b$ getting simplified (as a number).\subsection{Proof}
+Let $a$ and $b$ be unknown (or known). Let $c=a+b$ be a simplification (as a number). Starting with the following expression:
+\[a+b\]
+
+We have let $a+b=c$, so
+\[a+b=c\]
+
+This proof thus allows us to be convinced that:
+\[a+b = c\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The product\label{1}}
+\subsection{Theorem}
+We are aiming to prove the following equality:
+\[a  b = c\]
+with $a$ and $b$ being unknown (or known), and with $c=ab$ getting simplified (as a number).\subsection{Proof}
+Let $a$ and $b$ be unknown (or known). Let $c=ab$ be a simplification (as a number). Let us begin with:
+\[ab\]
+
+We have let $ab=c$, so
+\[ab=c\]
+
+Which thus makes us sure that:
+\[ab = c\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The power\label{2}}
+\subsection{Theorem}
+We are aiming to show that:
+\[a^b = c\]
+with $a$ and $b$ being unknown (or known), and with $c=a^b$ getting simplified (as a number).\subsection{Proof}
+Let $a$ and $b$ be unknown (or known). Let $c=a^b$ be a simplification (as a number). Starting with the following expression:
+\[a^b\]
+
+We have let $a^b=c$, so
+\[a^b=c\]
+
+Which thus makes us sure:
+\[a^b = c\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The distribution of the square\label{5}}
+\subsection{Theorem}
+We aim to show this proposition:
+\[a^2 = aa\]
+with $a$ being unknown (or known).\subsection{Proof}
+Let $a$ be unknown (or known). The following expression can be our starting point:
+\[a^2\]
+
+According to the removal of parenthesis (section \ref{6}), we know that $2=\left(2\right)$. Therefore,
+\[a^2=a^{\left(2\right)}\]
+
+From the addition (section \ref{0}), we get that $2=1+1$. This means that:
+\[a^{\left(2\right)}=a^{\left(1+1\right)}\]
+
+From the power distribution (section \ref{7}), we have that
+\[a^{\left(1+1\right)}=a^1a^1\]
+
+By the identity exponent (section \ref{8}), we have that $a^1=a$. Therefore,
+\[a^1a^1=aa^1\]
+
+From the identity exponent (section \ref{8}), we know that $a^1=a$. This means that:
+\[aa^1=aa\]
+
+This proof thus makes us sure:
+\[a^2 = aa\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The right distributivity of the product\label{9}}
+\subsection{Theorem}
+We aim to prove this equality:
+\[\left(a + b\right)c = ac + bc\]
+with $a$, $b$ and $c$ being unknown (or known).\subsection{Proof}
+Let $a$, $b$ and $c$ be unknown (or known). Let us start with:
+\[\left(a+b\right)c\]
+
+Using the commutativity of the product (section \ref{10}), we have
+\[\left(a+b\right)c=c\left(a+b\right)\]
+
+Using the left distributivity of the product (section \ref{11}), we get
+\[c\left(a+b\right)=ca+cb\]
+
+From the commutativity of the product (section \ref{10}), we know that $ca=ac$. This allows us to infer that:
+\[ca+cb=ac+cb\]
+
+Using the commutativity of the product (section \ref{10}), we have $cb=bc$. Thus,
+\[ac+cb=ac+bc\]
+
+This proof makes us sure:
+\[\left(a+b\right)c = ac+bc\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The litteral addition\label{13}}
+\subsection{Theorem}
+We are trying to prove the following affirmation:
+\[ax + bx = cx\]
+with $a$, $b$ and $x$ being unknown (or known), and with $c=a+b$ getting simplified (as a number).\subsection{Proof}
+Let $a$, $b$ and $x$ be unknown (or known). Let $c=a+b$ be a simplification (as a number). We will begin our proof with the following expression:
+\[ax+bx\]
+
+By the right distributivity of the product (section \ref{9}), we have that
+\[ax+bx=\left(a+b\right)x\]
+
+We have let $a+b=c$, so
+\[\left(a+b\right)x=\left(c\right)x\]
+
+From the removal of parenthesis (section \ref{6}), we get $\left(c\right)=c$. Therefore,
+\[\left(c\right)x=cx\]
+
+This proof therefore allows us to conclude that:
+\[ax+bx = cx\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The first remarkable identity\label{4}}
+\subsection{Theorem}
+We are trying to prove the following equality:
+\[\left(a+b\right)^2 = a^2 + 2ab + b^2\]
+with $a$ and $b$ being unknown (or known).\subsection{Proof}
+Let $a$ and $b$ be unknown (or known). Let us take this as a starting point:
+\[\left(a+b\right)^2\]
+
+Using the distribution of the square (section \ref{5}), we have
+\[\left(a+b\right)^2=\left(a+b\right)\left(a+b\right)\]
+
+According to the right distributivity of the product (section \ref{9}), we get that
+\[\left(a+b\right)\left(a+b\right)=a\left(a+b\right)+b\left(a+b\right)\]
+
+Using the left distributivity of the product (section \ref{11}), we get that $a\left(a+b\right)=aa+ab$. This allows us to infer that:
+\[a\left(a+b\right)+b\left(a+b\right)=aa+ab+b\left(a+b\right)\]
+
+By the left distributivity of the product (section \ref{11}), we have $b\left(a+b\right)=ba+bb$. This allows us to infer that:
+\[aa+ab+b\left(a+b\right)=aa+ab+ba+bb\]
+
+From the commutativity of the product (section \ref{10}), we get $ba=ab$. Thus,
+\[aa+ab+ba+bb=aa+ab+ab+bb\]
+
+By the left multiplication by the identity (section \ref{12}), we have $ab=1ab$. This means that:
+\[aa+ab+ab+bb=aa+1ab+ab+bb\]
+
+From the left multiplication by the identity (section \ref{12}), we know that $ab=1ab$. Thus,
+\[aa+1ab+ab+bb=aa+1ab+1ab+bb\]
+
+From the litteral addition (section \ref{13}), we get $1ab+1ab=2ab$. Thus,
+\[aa+1ab+1ab+bb=aa+2ab+bb\]
+
+Using the distribution of the square (section \ref{5}), we get that $aa=a^2$. This means that:
+\[aa+2ab+bb=a^2+2ab+bb\]
+
+By the distribution of the square (section \ref{5}), we know that $bb=b^2$. This means that:
+\[a^2+2ab+bb=a^2+2ab+b^2\]
+
+This proof therefore makes us sure:
+\[\left(a+b\right)^2 = a^2+2ab+b^2\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The right multiplication by the identity\label{14}}
+\subsection{Theorem}
+We aim to prove this affirmation:
+\[a\cdot1 = a\]
+with $a$ being unknown (or known).\subsection{Proof}
+Let $a$ be unknown (or known). Let us take this as a starting point:
+\[a\cdot1\]
+
+Using the commutativity of the product (section \ref{10}), we know that
+\[a\cdot1=1a\]
+
+Using the left multiplication by the identity (section \ref{12}), we know that
+\[1a=a\]
+
+Which allows us to conclude:
+\[a\cdot1 = a\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The first identity with a twist\label{3}}
+\subsection{Theorem}
+We are trying to prove the following equality:
+\[\left(x + 1\right)^2 = x^2 + 2x + 1\]
+with $x$ being unknown (or known).\subsection{Proof}
+Let $x$ be unknown (or known). We can begin with:
+\[\left(x+1\right)^2\]
+
+According to the first remarkable identity (section \ref{4}), we get
+\[\left(x+1\right)^2=x^2+2x\cdot1+1^2\]
+
+Using the right multiplication by the identity (section \ref{14}), we have that $2x\cdot1=2x$. Thus,
+\[x^2+2x\cdot1+1^2=x^2+2x+1^2\]
+
+From the power (section \ref{2}), we have $1^2=1$. This means that:
+\[x^2+2x+1^2=x^2+2x+1\]
+
+This proof allows us to conclude:
+\[\left(x+1\right)^2 = x^2+2x+1\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The triple left distributivity of the product\label{16}}
+\subsection{Theorem}
+We are aiming to prove this affirmation:
+\[a\left(b + c + d\right) = ab + ac + ad\]
+with $a$, $b$, $c$ and $d$ being unknown (or known).\subsection{Proof}
+Let $a$, $b$, $c$ and $d$ be unknown (or known). Let us take this as a starting point:
+\[a\left(b+c+d\right)\]
+
+Using the removal of parenthesis (section \ref{6}), we know that $c+d=\left(c+d\right)$. This allows us to infer that:
+\[a\left(b+c+d\right)=a\left(b+\left(c+d\right)\right)\]
+
+From the left distributivity of the product (section \ref{11}), we have
+\[a\left(b+\left(c+d\right)\right)=ab+a\left(c+d\right)\]
+
+From the left distributivity of the product (section \ref{11}), we get that $a\left(c+d\right)=ac+ad$. Thus,
+\[ab+a\left(c+d\right)=ab+ac+ad\]
+
+Which thus allows us to conclude:
+\[a\left(b+c+d\right) = ab+ac+ad\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The triple right distributivity of the product\label{15}}
+\subsection{Theorem}
+We want to show this equality:
+\[\left(a + b + c\right)d = ad + bd + cd\]
+with $a$, $b$, $c$ and $d$ being unknown (or known).\subsection{Proof}
+Let $a$, $b$, $c$ and $d$ be unknown (or known). Let us take this as a starting point:
+\[\left(a+b+c\right)d\]
+
+According to the commutativity of the product (section \ref{10}), we get
+\[\left(a+b+c\right)d=d\left(a+b+c\right)\]
+
+According to the triple left distributivity of the product (section \ref{16}), we get
+\[d\left(a+b+c\right)=da+db+dc\]
+
+Using the commutativity of the product (section \ref{10}), we get $da=ad$. This means that:
+\[da+db+dc=ad+db+dc\]
+
+By the commutativity of the product (section \ref{10}), we get $db=bd$. Therefore,
+\[ad+db+dc=ad+bd+dc\]
+
+By the commutativity of the product (section \ref{10}), we get that $dc=cd$. Therefore,
+\[ad+bd+dc=ad+bd+cd\]
+
+This proof allows us to conclude that:
+\[\left(a+b+c\right)d = ad+bd+cd\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The left distribution of the cube\label{18}}
+\subsection{Theorem}
+We want to show this proposition:
+\[a^3 = a^2a\]
+with $a$ being unknown (or known).\subsection{Proof}
+Let $a$ be unknown (or known). Starting with the following expression:
+\[a^3\]
+
+According to the removal of parenthesis (section \ref{6}), we get $3=\left(3\right)$. This means that:
+\[a^3=a^{\left(3\right)}\]
+
+According to the addition (section \ref{0}), we have that $3=2+1$. This allows us to infer that:
+\[a^{\left(3\right)}=a^{\left(2+1\right)}\]
+
+From the power distribution (section \ref{7}), we know that
+\[a^{\left(2+1\right)}=a^2a^1\]
+
+From the identity exponent (section \ref{8}), we have that $a^1=a$. Therefore,
+\[a^2a^1=a^2a\]
+
+Which makes us sure:
+\[a^3 = a^2a\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The right distribution of the cube\label{17}}
+\subsection{Theorem}
+We are trying to prove the following proposition:
+\[a^3 = aa^2\]
+with $a$ being unknown (or known).\subsection{Proof}
+Let $a$ be unknown (or known). A friend of mine told me to start with:
+\[a^3\]
+
+According to the left distribution of the cube (section \ref{18}), we get that
+\[a^3=a^2a\]
+
+According to the commutativity of the product (section \ref{10}), we have
+\[a^2a=aa^2\]
+
+Which therefore makes us sure:
+\[a^3 = aa^2\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+
+\section{The cube remarkable identity\label{19}}
+\subsection{Theorem}
+We are trying to prove the following affirmation:
+\[\left(a + b\right)^3 = a^3 + 3a^2b + 3ab^2 + b^3\]
+with $a$ and $b$ being unknown (or known).\subsection{Proof}
+Let $a$ and $b$ be unknown (or known). We can begin with:
+\[\left(a+b\right)^3\]
+
+According to the left distribution of the cube (section \ref{18}), we get that
+\[\left(a+b\right)^3=\left(a+b\right)^2\left(a+b\right)\]
+
+By the removal of parenthesis (section \ref{6}), we get $\left(a+b\right)^2=\left(\left(a+b\right)^2\right)$. This allows us to infer that:
+\[\left(a+b\right)^2\left(a+b\right)=\left(\left(a+b\right)^2\right)\left(a+b\right)\]
+
+Using the first remarkable identity (section \ref{4}), we know that $\left(a+b\right)^2=a^2+2ab+b^2$. This means that:
+\[\left(\left(a+b\right)^2\right)\left(a+b\right)=\left(a^2+2ab+b^2\right)\left(a+b\right)\]
+
+From the left distributivity of the product (section \ref{11}), we have
+\[\left(a^2+2ab+b^2\right)\left(a+b\right)=\left(a^2+2ab+b^2\right)a+\left(a^2+2ab+b^2\right)b\]
+
+From the triple right distributivity of the product (section \ref{15}), we get $\left(a^2+2ab+b^2\right)a=a^2a+2aba+b^2a$. Therefore,
+\[\left(a^2+2ab+b^2\right)a+\left(a^2+2ab+b^2\right)b=a^2a+2aba+b^2a+\left(a^2+2ab+b^2\right)b\]
+
+From the triple right distributivity of the product (section \ref{15}), we get that $\left(a^2+2ab+b^2\right)b=a^2b+2abb+b^2b$. This allows us to infer that:
+\[a^2a+2aba+b^2a+\left(a^2+2ab+b^2\right)b=a^2a+2aba+b^2a+a^2b+2abb+b^2b\]
+
+Using the left distribution of the cube (section \ref{18}), we get $a^2a=a^3$. Therefore,
+\[a^2a+2aba+b^2a+a^2b+2abb+b^2b=a^3+2aba+b^2a+a^2b+2abb+b^2b\]
+
+Using the left distribution of the cube (section \ref{18}), we have $b^2b=b^3$. Thus,
+\[a^3+2aba+b^2a+a^2b+2abb+b^2b=a^3+2aba+b^2a+a^2b+2abb+b^3\]
+
+By the commutativity of the addition (section \ref{20}), we get that $b^2a+a^2b=a^2b+b^2a$. This means that:
+\[a^3+2aba+b^2a+a^2b+2abb+b^3=a^3+2aba+a^2b+b^2a+2abb+b^3\]
+
+Using the commutativity of the product (section \ref{10}), we have $ba=ab$. This allows us to infer that:
+\[a^3+2aba+a^2b+b^2a+2abb+b^3=a^3+2aab+a^2b+b^2a+2abb+b^3\]
+
+From the distribution of the square (section \ref{5}), we have $aa=a^2$. This means that:
+\[a^3+2aab+a^2b+b^2a+2abb+b^3=a^3+2a^2b+a^2b+b^2a+2abb+b^3\]
+
+By the left multiplication by the identity (section \ref{12}), we know that $a^2b=1a^2b$. This means that:
+\[a^3+2a^2b+a^2b+b^2a+2abb+b^3=a^3+2a^2b+1a^2b+b^2a+2abb+b^3\]
+
+According to the litteral addition (section \ref{13}), we know that $2a^2b+1a^2b=3a^2b$. Thus,
+\[a^3+2a^2b+1a^2b+b^2a+2abb+b^3=a^3+3a^2b+b^2a+2abb+b^3\]
+
+By the commutativity of the product (section \ref{10}), we know that $b^2a=ab^2$. This allows us to infer that:
+\[a^3+3a^2b+b^2a+2abb+b^3=a^3+3a^2b+ab^2+2abb+b^3\]
+
+By the distribution of the square (section \ref{5}), we know that $bb=b^2$. This allows us to infer that:
+\[a^3+3a^2b+ab^2+2abb+b^3=a^3+3a^2b+ab^2+2ab^2+b^3\]
+
+According to the left multiplication by the identity (section \ref{12}), we have $ab^2=1ab^2$. This means that:
+\[a^3+3a^2b+ab^2+2ab^2+b^3=a^3+3a^2b+1ab^2+2ab^2+b^3\]
+
+From the litteral addition (section \ref{13}), we get $1ab^2+2ab^2=3ab^2$. Thus,
+\[a^3+3a^2b+1ab^2+2ab^2+b^3=a^3+3a^2b+3ab^2+b^3\]
+
+Which therefore allows us to conclude:
+\[\left(a+b\right)^3 = a^3+3a^2b+3ab^2+b^3\]
+\begin{flushright}
+QED
+\end{flushright}
+
+
+\end{document}
