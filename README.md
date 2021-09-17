@@ -1,14 +1,18 @@
 # PyMaTex
 ## Table of content
 1. [Aim](#Aim)
-2. [How to define a new theorem or a new axiom](#How-to-define-a-new-theorem-or-a-new-axiom)
-3. [Special case: evaluations](#Special-case-evaluations)
-4. [Hijacks](#Hijacks)
-5. [Important notes](#Important-notes)
-6. [Ways to improve the program](#Ways-to-improve-the-program)
+2. [Theorem groups](#Theorem-groups)
+3. [How to define a new theorem or a new axiom](#How-to-define-a-new-theorem-or-a-new-axiom)
+4. [Special case: evaluations](#Special-case-evaluations)
+5. [Hijacks](#Hijacks)
+6. [Important notes](#Important-notes)
+7. [Ways to improve the program](#Ways-to-improve-the-program)
 
 ## Aim
 The aim of this school project is to give (some kind of) library, which allows to write a simple mathematical proof, which will get completely verified and then saved in a LaTeX document. If you are interested in the idea behind this project, go take a look at [Metamath](http://us.metamath.org/), a program having the exact same idea but being much more complete. Note that this program has been done in collaboration with Alberts Reisons.
+
+## Theorem groups
+You can instantiate a ```TheoremGroup``` object to get a LaTeX document containing multiple proofs in the end. You can add new theorem to it by using the ```add_theorem(theorem)``` method, to which you need to give the theorem class you wan to show (not an instance, the class). You can also use the ```add_all_theorems(module)``` to import all theorems from a python module. To finish with, you can save the proof to a LaTeX file (which will be automatically compiled using *pdflatex*), by using the ```save(file_name)``` method. Note that the file name must not have any file extension.
 
 ## How to define a new theorem or a new axiom
 First, you have to know that, for the program, a theorem and a proof are (almost) the same thing. The main difference comes from the fact that an axiom is a theorem to which you give no proof. Moreover, for now, we can only work with direct equalities (show that (a + b)^3 = a^3 + 3a^2\*b + 3a\*b^2 + b^3, for example). Thus, all theorems (and axioms) inherit from the ```theorem.Equality``` class. To define an axiom we can do the following:
