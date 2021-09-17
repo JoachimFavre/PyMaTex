@@ -2,7 +2,7 @@
 ## Table of content
 1. [Aim](#Aim)
 2. [How to define a new theorem or a new axiom](#How-to-define-a-new-theorem-or-a-new-axiom)
-3. [Special case: evaluations](#Special-case:-evaluations)
+3. [Special case: evaluations](#Special-case-evaluations)
 4. [Hijacks](#Hijacks)
 5. [Important notes](#Important-notes)
 6. [Ways to improve the program](#Ways-to-improve-the-program)
